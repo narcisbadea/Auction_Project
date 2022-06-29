@@ -65,7 +65,6 @@ namespace Auction_Project.Models
 
         // POST api/<BidsController>
         [HttpPost]
-        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<Bid>> Post(BidRequest bid)
         {
             if(await _bidServices.Post(bid)) 
